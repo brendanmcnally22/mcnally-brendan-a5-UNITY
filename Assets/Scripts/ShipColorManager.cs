@@ -8,23 +8,32 @@ public class ShipColorChangerKeyboard : MonoBehaviour
     // Index to track the current color
     private int currentColorIndex = 0;
 
-   
+
     private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-    
+        // get the SpriteRenderer on this GameObject
+        spriteRenderer = GetComponent<SpriteRenderer>();
+       
+        // Initialize with the first color.
+        spriteRenderer.color = colors[currentColorIndex];
     }
 
     private void Update()
     {
-
+        // Either shift can change our color :D
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+            ChangeColor();
+        }
     }
 
     // Cycle to the next color.
     private void ChangeColor()
     {
-       
+        currentColorIndex = (currentColorIndex + 1) % colors.Length;
+        spriteRenderer.color = colors[currentColorIndex];
     }
 }
 
