@@ -23,7 +23,7 @@ public class ShipColorChangerKeyboard : MonoBehaviour
     private void Update()
     {
         // Either shift can change our color :D
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             ChangeColor();
         }
