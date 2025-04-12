@@ -1,9 +1,11 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WinManager : MonoBehaviour
 {
     public TMP_Text winDisplay;
+    public GameManager gameManager;
     private bool hasWon = false;
 
     void Start()
@@ -20,9 +22,16 @@ public class WinManager : MonoBehaviour
         {
             Win();
         }
+
+        if (hasWon && Input.GetKeyDown(KeyCode.R))
+        {
+            Scene current = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(current.name);
+        }
+
     }
 
-    void Win()
+void Win()
     {
         if (winDisplay != null)
         {
