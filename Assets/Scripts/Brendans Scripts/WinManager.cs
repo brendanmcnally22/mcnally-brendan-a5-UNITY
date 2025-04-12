@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class WinManager : MonoBehaviour
 {
     public TMP_Text winDisplay;
-    public GameManager gameManager;
     private bool hasWon = false;
 
     void Start()
