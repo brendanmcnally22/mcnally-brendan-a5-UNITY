@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 5e3846eaa7d400c4e9d649a12e861087
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameManager: {instanceID: 0}
+  - largeAsteroid: {fileID: 5020878972912135297, guid: fffc042d78789f646875953d8cf65a8d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
