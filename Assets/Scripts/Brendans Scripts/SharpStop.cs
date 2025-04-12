@@ -7,10 +7,6 @@ public class SharpStop : MonoBehaviour
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        if (rb2d == null)
-        {
-            Debug.LogError("SharpStop: No Rigidbody2D found on " + gameObject.name); // trying to debug rn
-        }
     }
 
     void Update()
@@ -23,7 +19,7 @@ public class SharpStop : MonoBehaviour
 
     void ApplyStop()
     {
-        rb2d.velocity = Vector2.zero;
+        rb2d.linearVelocity = Vector2.zero;
         rb2d.angularVelocity = 0f;
     }
 }
